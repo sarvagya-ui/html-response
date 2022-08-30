@@ -13,10 +13,6 @@ export class AppComponent {
   page: any;
   constructor(private sanitizer: DomSanitizer, private htmlResponseService: HtmlResponseService) { }
   ngOnInit() {
-    this.htmlResponseService.get().subscribe((res: any) => {
-      this.page = res
-      console.log(res);
-    })
     this.updateHtml();
   }
 
